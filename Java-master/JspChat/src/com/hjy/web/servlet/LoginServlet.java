@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet {
     super();
   }
 
+  // check for detect the new branch
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     response.getWriter().append("Served at: ").append(request.getContextPath());
