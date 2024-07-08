@@ -46,7 +46,12 @@ public class BeanFactory {
 		}
 		return customerService;
 	}
-	
+	private synchronized static ICustomerService getCustomerService(){
+		if(customerService == null){
+			customerService = new CustomerServiceImpl();
+		}
+		return customerService;
+	}
 	private synchronized static IOrderDao getOrderDao(){
 		if(orderDao == null){
 			orderDao = new OrderDaoImpl();
