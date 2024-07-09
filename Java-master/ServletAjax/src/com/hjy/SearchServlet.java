@@ -21,23 +21,23 @@ public class SearchServlet extends HttpServlet {
 		datas.add("java");
 		datas.add("date");
 	}
-	
+	//fix login bug
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-		//»ñÈ¡¿Í»§¶Ë·¢ËÍ¹ýÀ´µÄ¹Ø¼ü×Ö
+		//ï¿½ï¿½È¡ï¿½Í»ï¿½ï¿½Ë·ï¿½ï¿½Í¹ï¿½ï¿½ï¿½ï¿½Ä¹Ø¼ï¿½ï¿½ï¿½
 		String keyword = req.getParameter("keyword");
-		//´¦Àí¹Ø¼ü×Ö£¬µÃµ½¹ØÁªÊý¾Ý
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½Ö£ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		List<String> listData = getData(keyword);
 		System.out.println(listData);
-		//·µ»ØJson¸ñÊ½
+		//ï¿½ï¿½ï¿½ï¿½Jsonï¿½ï¿½Ê½
 //		System.out.println(JSONArray.fromObject(listData));
 		resp.getWriter().write(JSONArray.fromObject(listData).toString());
 	}
 	/**
-	 * »ñÈ¡¹ØÁªÊý×é
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param keyword
 	 * @return
 	 */

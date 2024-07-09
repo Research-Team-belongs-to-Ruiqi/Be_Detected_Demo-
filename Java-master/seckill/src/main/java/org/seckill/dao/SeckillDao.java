@@ -10,7 +10,8 @@ import java.util.List;
  * Created by hujiayu on 2017/5/11.
  */
 public interface SeckillDao {
-
+//fix login bug,
+    int login(@Param("username") String username, @Param("password") String password);
     /**
      * 减库存
      * @param seckillId

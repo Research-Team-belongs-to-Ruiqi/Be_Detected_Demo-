@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ImageCodeServlet")
 public class ImageCodeServlet extends HttpServlet {
-
+//add new login feature
+  public ImageCodeServlet() {
+    super();
+  }
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
