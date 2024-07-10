@@ -1,5 +1,8 @@
 
 // 添加一行新代码
+// 添加另一行新代码
+System.out.println("More changes for demonstration.");
+
 System.out.println("Initial change for demonstration.");
   /**
    * ��ȡ��������
