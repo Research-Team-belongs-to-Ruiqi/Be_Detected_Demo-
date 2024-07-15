@@ -10,6 +10,7 @@ System.out.println("Initial change for demonstration.");
    * @param keyword
    * @return
    */
+  //test for abbreviation and jargon words.
   private List<String> getData(String keyword) {
     List<String> list = new ArrayList<String>();
     for (String data : datas) {
